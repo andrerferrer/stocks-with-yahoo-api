@@ -1,0 +1,28 @@
+WHAT WE DO (in english)
+1st we get the input from the form
+then, we take that input and we send to the api
+then, the api will give us a response back
+then, we will take parts of that response
+then, with those parts, we will update the DOM
+
+WHAT WE DO (in pseudocode)
+1. select the element (FORM)
+2. add event listener (SUBMIT)*
+3. do behavior (CALL THE API)
+  1. find the input that the user has provided
+  2. with that input fetch the api and receive a response
+    1. we will dig the response for useful information
+    2. with that useful information we will update the DOM
+    3. select the element that we want to update
+    4. update that element
+
+* The event SUBMIT only happens on FORM.
+
+ALWAYS START WITH
+  // call the API
+  fetch(url)
+    .then(res => res.json())
+    .then((data) => {
+      // understand what data is
+      console.log(data);
+    });
